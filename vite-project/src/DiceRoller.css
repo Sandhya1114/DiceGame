@@ -109,18 +109,63 @@ background: linear-gradient(135deg, #e59d9d, #c2de89);
     transform: rotate(0deg) scale(1);
   }
 }
+.instructions-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.862);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
 
-@media (max-width: 375px) {
+.instructions-modal h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.instructions-modal ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.instructions-modal ul li {
+  margin: 10px 0;
+}
+
+.instructions-modal button {
+  background-color: #fff;
+  border: none;
+  color: #0f1a24;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.instructions-modal button:hover {
+  background-color: #fff;
+}
+
+@media (max-width: 475px) {
   .game-title {
     font-size: 28px; 
   }
 
   .game-target {
     font-size: 16px; 
+     margin-bottom: -2px;
   }
 
   .dice-face {
-    font-size: 80px;
+    font-size: 186px;
   }
 
   .game-button {
