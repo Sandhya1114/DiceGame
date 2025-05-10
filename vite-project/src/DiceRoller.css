@@ -3,8 +3,8 @@ body {
   padding: 0;
   background-color: #f0f2f5;
   display: flex;
-  justify-content: center; /* Center content horizontally */
-  align-items: center; /* Center content vertically */
+  justify-content: center; 
+  align-items: center; 
   min-height: 100vh; 
 background: linear-gradient(135deg, #e59d9d, #c2de89);
 }
@@ -109,23 +109,46 @@ background: linear-gradient(135deg, #e59d9d, #c2de89);
     transform: rotate(0deg) scale(1);
   }
 }
+/* Dice face style */
+.dice-face {
+  font-size: 3rem;
+  text-align: center;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #f0f0f0;
+  color: #333;
+  transition: background-color 0.3s ease, color 0.3s ease; 
+}
 
+.dice-face.rolling {
+  background-color: #ffcc00; 
+  color: white;
+}
+
+/* Optionally, different colors for each dice face */
+.dice-face.⚀ { background-color: #ff0000; }  
+.dice-face.⚁ { background-color: #00ff00; }  
+.dice-face.⚂ { background-color: #0000ff; }  
+.dice-face.⚃ { background-color: #ff00ff; } 
+.dice-face.⚄ { background-color: #ffff00; }  
+.dice-face.⚅ { background-color: #00ffff; }
 @media (max-width: 375px) {
   .game-title {
-    font-size: 28px; /* Smaller font for title */
+    font-size: 28px; 
   }
 
   .game-target {
-    font-size: 16px; /* Smaller font for target score */
+    font-size: 16px; 
   }
 
   .dice-face {
-    font-size: 80px; /* Even smaller dice */
+    font-size: 80px;
   }
 
   .game-button {
-    padding: 12px 24px; /* Smaller button size */
-    font-size: 16px; /* Smaller button text */
+    padding: 12px 24px; 
+    font-size: 16px; 
   }
   .game-result {
     width: 73vw;
