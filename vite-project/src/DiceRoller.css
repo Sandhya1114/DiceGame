@@ -1,0 +1,134 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f0f2f5;
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  min-height: 100vh; 
+background: linear-gradient(135deg, #e59d9d, #c2de89);
+}
+
+.game-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: "Segoe UI", sans-serif;
+  /* background: linear-gradient(135deg, #e59d9d, #c2de89); */
+  width: 80vw;
+}
+
+.game-title {
+  font-size: 48px;
+  margin-bottom: 10px;
+  color: #0e161e;
+}
+
+.target-label {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #0e161e;
+}
+
+.target-input {
+  margin-left: 10px;
+  padding: 8px 12px;
+  font-size: 16px;
+  width: 80px;
+  border-radius: 6px;
+  border: 1px solid #0e161e;
+}
+
+.game-target {
+  font-size: 20px;
+  margin-bottom: -52px;
+  color: #0e161e;
+}
+
+.dice-face {
+ font-size: 202px;
+    margin-bottom: -27px;
+  transition: transform 0.3s ease;
+}
+
+.rolling {
+  animation: shake 0.5s ease;
+}
+
+.game-score {
+  font-size: 26px;
+  margin-bottom: 20px;
+  color: #0d0f11;
+  font-weight: 500;
+}
+
+.game-result {
+  font-size: 28px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #1f6267;
+}
+
+.game-button {
+  padding: 16px 32px;
+  font-size: 20px;
+  border: none;
+  border-radius: 10px;
+  background-color: #0f1a24;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.game-button:hover {
+  background-color: #0f1a24;
+}
+
+.game-button:disabled {
+  background-color: #0f1a24;
+  cursor: not-allowed;
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  25% {
+    transform: rotate(10deg) scale(1.2);
+  }
+  50% {
+    transform: rotate(-10deg) scale(1.2);
+  }
+  75% {
+    transform: rotate(10deg) scale(1.2);
+  }
+  100% {
+    transform: rotate(0deg) scale(1);
+  }
+}
+
+@media (max-width: 375px) {
+  .game-title {
+    font-size: 28px; /* Smaller font for title */
+  }
+
+  .game-target {
+    font-size: 16px; /* Smaller font for target score */
+  }
+
+  .dice-face {
+    font-size: 80px; /* Even smaller dice */
+  }
+
+  .game-button {
+    padding: 12px 24px; /* Smaller button size */
+    font-size: 16px; /* Smaller button text */
+  }
+  .game-result {
+    width: 73vw;
+}
+
+}
